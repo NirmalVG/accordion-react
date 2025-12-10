@@ -12,8 +12,9 @@ const Accordion = ({ data }) => {
           onOpen={setCurOpen}
           num={index}
           title={item.title}
-          text={item.text}
-        />
+        >
+          {item.text}
+        </AccordionItem>
       ))}
     </div>
   )

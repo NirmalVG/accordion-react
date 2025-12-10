@@ -1,6 +1,6 @@
 import { useState } from "react"
 
-const AccordionItem = ({ num, title, text, curOpen, onOpen }) => {
+const AccordionItem = ({ num, title, children, curOpen, onOpen }) => {
   const isOpen = curOpen === num
 
   const handleOpen = () => {
@@ -11,7 +11,7 @@ const AccordionItem = ({ num, title, text, curOpen, onOpen }) => {
       <p className="number">0{num < 0 ? `0${num + 1}` : num + 1}</p>
       <p className="text">{title}</p>
       <p className="icon">{isOpen ? "-" : "+"}</p>
-      {isOpen && <p className="content-box">{text}</p>}
+      {isOpen && <p className="content-box">{children}</p>}
     </div>
   )
 }
